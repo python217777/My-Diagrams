@@ -1,4 +1,21 @@
 {
   "projectName": "My-Diagrams",
-  "projectOwner": "CodeByStella"
+  "projectOwner": "CodeByStella",
+  "files": [
+    "README.md"
+  ],
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributorsPerLine": 7,
+  "contributors": [
+    {
+      "login": "itstar064",
+      "name": "ITstar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/183505215?v=4",
+      "profile": "https://github.com/itstar064",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ]
 }
