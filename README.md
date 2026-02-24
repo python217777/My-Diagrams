@@ -1,29 +1,37 @@
 # My Diagrams
 
+A collection of technical diagrams (Mermaid) for reference and documentation—ML pipelines, system design, workflows, and more.
+
 ## Diagrams
 
-| #   | Title                                           |
-| --- | ----------------------------------------------- |
-| 1   | [ML Training Pipeline](#1-ml-training-pipeline) |
+| #   | Title                | File                                                     |
+| --- | -------------------- | -------------------------------------------------------- |
+| 1   | ML Training Pipeline | [ai-ml-training-pipeline.md](ai-ml-training-pipeline.md) |
 
 ---
 
-## 1. ML Training Pipeline
+## Contributing
 
-```mermaid
-flowchart TD
-    A[Raw Data] --> B[Data Cleaning & Preprocessing]
-    B --> C[Feature Engineering / Selection]
-    C --> D[Model Selection]
-    D --> E[Set Hyperparameters]
-    E --> F[Model Training]
-    F --> G[Learned Parameters]
-    G --> H[Validation / Testing]
-    H --> I[Performance Evaluation]
-    I -->|Not satisfactory| E
-    I -->|Satisfactory| J[Final Trained Model]
-```
+### Adding a diagram
 
-**Description:** Iterative process: prepare data → choose model & hyperparameters → train → evaluate → tune.
+1. **Create a markdown file** (e.g. `topic-name.md`) in this repo.
+2. **Use Mermaid** inside a fenced code block:
+   ````md
+   ```mermaid
+   flowchart TD
+       A --> B
+   ```
+   ````
+3. **Add a short description** and notes below the diagram if helpful.
+4. **Add a row** to the [Diagrams](#diagrams) table above: `| N | Title | [filename.md](filename.md) |`.
 
-**Notes:** Hyperparameters set _before_ training; parameters learned _during_ training. Loop = hyperparameter tuning. Reflects production ML pipelines.
+### Style
+
+- One diagram (or one closely related set) per file.
+- Keep descriptions concise.
+- Use clear, consistent node labels in Mermaid.
+
+### Pull requests
+
+- Open a PR with your new or updated diagram file and a README table entry.
+- Describe what the diagram shows in the PR description.
