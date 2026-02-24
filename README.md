@@ -31,7 +31,7 @@ A collection of technical diagrams (Mermaid) for reference and documentation—M
 - Keep descriptions concise.
 - Use clear, consistent node labels in Mermaid.
 
-### Pull requests
+### Pull request
 
 - Open a PR with your new or updated diagram file and a README table entry.
 - Describe what the diagram shows in the PR description.
