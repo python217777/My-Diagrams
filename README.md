@@ -6,9 +6,10 @@ A collection of technical diagrams (Mermaid) for reference and documentation—M
 
 ## Diagrams
 
-| #   | Title                                                         | 
-| --- | ------------------------------------------------------------- | 
-| 1   | [ML Training Pipeline](./diagrams/ai-ml-training-pipeline.md) |
+| #   | Title                                                                           |
+| --- | ------------------------------------------------------------------------------- |
+| 1   | [ML Training Pipeline](./diagrams/ai-ml-training-pipeline.md)                   |
+| 2   | [How Embeddings Work in Machine Learning](./diagrams/how-embeddings-work-ml.md) |
 
 ---
 
