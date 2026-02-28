@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ai-ml-training-pipeline",
+    "file": "ai-ml-training-pipeline.md",
+    "title": "ML Training Pipeline",
+    "description": "Iterative process: prepare data → choose model & hyperparameters → train → evaluate → tune."
+  },
+  {
+    "id": "how-embeddings-work-ml",
+    "file": "how-embeddings-work-ml.md",
+    "title": "How Embeddings Work in Machine Learning (Discrete Data → Dense Vectors → Model)",
+    "description": "Embeddings convert symbolic or categorical data into dense numeric vectors that machine learning models can understand."
+  }
+]

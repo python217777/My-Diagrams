@@ -1,0 +1,498 @@
+/* Terminal-style layout */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.glass-panel {
+  width: 100%;
+  max-width: 1280px;
+  min-height: 95vh;
+  border-radius: 4px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 0 0 1px var(--border),
+    0 0 24px var(--border-glow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header: terminal bar */
+.site-header {
+  padding: 0.75rem 1.25rem;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.site-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--green);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.site-title:hover {
+  text-decoration: none;
+  color: var(--accent);
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.site-cta {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  border-radius: 2px;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.site-cta:hover {
+  background: var(--accent);
+  color: var(--bg-panel);
+  text-decoration: none;
+}
+
+.main {
+  flex: 1;
+  padding: 1.25rem 1.5rem 2rem;
+  width: 100%;
+}
+
+.site-footer {
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  background: var(--card-bg);
+}
+
+.site-footer a {
+  color: var(--accent);
+}
+
+.site-footer a:hover {
+  color: var(--text-bright);
+  text-decoration: underline;
+}
+
+/* About */
+.about {
+  margin-bottom: 1.5rem;
+}
+
+.about h1 {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+  color: var(--amber);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.about p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+}
+
+/* Search */
+.search-section {
+  margin-bottom: 1.25rem;
+}
+
+.search-label {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: var(--muted);
+  text-transform: lowercase;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--input-border);
+  border-radius: 2px;
+  background: var(--input-bg);
+  color: var(--text-bright);
+  font-size: 0.9rem;
+}
+
+.search-input::placeholder {
+  color: var(--muted);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--border-glow);
+}
+
+/* Diagram list */
+.diagrams-list {
+  margin-top: 0.5rem;
+}
+
+.list-message {
+  color: var(--muted);
+  margin: 0;
+}
+
+.list-error {
+  color: var(--error);
+}
+
+.diagram-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.diagram-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.diagram-card:hover {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 12px var(--border-glow);
+}
+
+.diagram-card-link {
+  display: block;
+  padding: 1.15rem 1.35rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.diagram-card-link:hover {
+  text-decoration: none;
+}
+
+.diagram-card-title {
+  font-weight: 500;
+  color: var(--green);
+  font-size: 0.9rem;
+}
+
+.diagram-card-desc {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* Diagram view */
+.diagram-view {
+  margin-top: 0;
+}
+
+.view-nav {
+  margin-bottom: 1rem;
+}
+
+.view-nav a {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+.view-actions {
+  margin-bottom: 1.5rem;
+}
+
+/* Rendered markdown (full diagram page) */
+.markdown-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.markdown-body h1 {
+  font-size: 1.1rem;
+  margin: 0 0 0.6rem;
+  padding-bottom: 0.2rem;
+  color: var(--text-bright);
+}
+
+.markdown-body h2 {
+  font-size: 1rem;
+  margin: 1rem 0 0.4rem;
+  color: var(--text-bright);
+}
+
+.markdown-body h3 {
+  font-size: 0.95rem;
+  margin: 0.85rem 0 0.3rem;
+  color: var(--text-bright);
+}
+
+.markdown-body p {
+  margin: 0 0 0.6rem;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  margin: 0 0 0.75rem;
+  padding-left: 1.5rem;
+}
+
+.markdown-body li {
+  margin: 0.2rem 0;
+}
+
+.markdown-body pre {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  overflow: auto;
+}
+
+.markdown-body pre:has(.markdown-mermaid-wrap) {
+  padding: 0;
+  background: transparent;
+  border: none;
+}
+
+.markdown-body code {
+  font-size: 0.88em;
+  padding: 0.15em 0.35em;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--accent);
+}
+
+.markdown-body pre > code {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+.markdown-mermaid-wrap {
+  margin: 1rem 0;
+  padding: 1rem 0;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-download {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.btn-download:hover {
+  background: var(--accent);
+  color: var(--bg-panel);
+  text-decoration: none;
+}
+
+.view-message {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.view-error {
+  color: var(--error);
+}
+
+/* Mermaid: pan/zoom container + toolbar */
+.mermaid-diagram-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.mermaid-toolbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.mermaid-toolbar-btn {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.mermaid-toolbar-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Pan/zoom control panel (directional + reset + zoom in/out) */
+.mermaid-controls {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  background: rgba(40, 44, 52, 0.92);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.mermaid-controls-pan {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mermaid-controls-row {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.mermaid-controls-row span {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+.mermaid-controls-zoom {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  margin-left: 4px;
+  padding-left: 4px;
+}
+
+.mermaid-control-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: rgba(60, 64, 72, 0.9);
+  color: rgba(220, 220, 220, 0.95);
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.mermaid-control-btn:hover {
+  background: rgba(80, 84, 92, 0.95);
+  color: #fff;
+}
+
+.mermaid-control-btn:active {
+  background: rgba(100, 104, 112, 0.95);
+}
+
+.mermaid-wrap {
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: none;
+}
+
+.mermaid-wrap:active {
+  cursor: grabbing;
+}
+
+.mermaid-wrap > * {
+  width: fit-content;
+  max-width: 100%;
+  cursor: grab;
+}
+
+.mermaid-wrap > *:active {
+  cursor: grabbing;
+}
+
+.mermaid-wrap svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mermaid-wrap svg text {
+  font-size: 15px !important;
+  fill: #e6edf3 !important;
+  font-family: inherit;
+}
+
+.mermaid-empty,
+.mermaid-error {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.mermaid-error pre {
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--error);
+}
+
