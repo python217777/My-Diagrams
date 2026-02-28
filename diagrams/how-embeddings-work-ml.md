@@ -1,7 +1,7 @@
 # How Embeddings Work in Machine Learning (Discrete Data → Dense Vectors → Model)
 
 ```mermaid
-flowchart LR
+flowchart TD
     A[Raw Input<br/>word / item / image / user ID] --> B[Tokenization or Indexing]
     B --> C[Embedding Layer<br/>lookup table]
     C --> D["Dense Vector<br/>e.g. [0.21, -0.44, 0.98, ...]"]

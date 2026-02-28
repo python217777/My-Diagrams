@@ -7,6 +7,8 @@
 
 A collection of technical diagrams (Mermaid) for reference and documentation—ML pipelines, system design, workflows, and more.
 
+**Live site:** The [GitHub Pages](https://pages.github.com/) site is built from the `frontend` React app and deploys automatically when changes are merged to `main`. You can browse, search, view rendered Mermaid diagrams, and download diagram source from there. In your repo **Settings → Pages**, set **Source** to **GitHub Actions** so the workflow can deploy.
+
 ## Contributing
 
 ### Adding a diagram
