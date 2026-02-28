@@ -1,7 +1,11 @@
 | #   | Diagram                                                                         |
 | --- | ------------------------------------------------------------------------------- |
 | 1   | [ML Training Pipeline](./diagrams/ai-ml-training-pipeline.md)                   |
-| 2   | [How Embeddings Work in Machine Learning](./diagrams/how-embeddings-work-ml.md) |
+| 2   | [How Embeddings Work in Machine Learning](./diagrams/how-embeddings-work-ml.md)  |
+| 3   | [RAG: Retrieval Augmented Generation](./diagrams/rag-retrieval-augmented-generation.md) |
+| 4   | [Transformer: Attention Overview](./diagrams/transformer-attention-overview.md)  |
+| 5   | [LLM Fine-tuning Pipeline](./diagrams/llm-finetuning-pipeline.md)                |
+| 6   | [Neural Network Overview](./diagrams/neural-network-overview.md)                 |
 
 # My Diagrams
 
