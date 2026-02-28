@@ -13,7 +13,8 @@ function useDiagram(id) {
   const [error, setError] = useState(null)
   useEffect(() => {
     const base = import.meta.env.BASE_URL || ''
-    fetch(`${base}diagrams-manifest.json`)
+    const v = import.meta.env.VITE_BUILD_ID || ''
+    fetch(`${base}diagrams-manifest.json${v ? `?v=${v.slice(0, 7)}` : ''}`)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error('Failed to load manifest'))))
       .then((list) => {
         const d = list.find((x) => x.id === id)

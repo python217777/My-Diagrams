@@ -7,7 +7,8 @@ function useManifest() {
   const [error, setError] = useState(null)
   useEffect(() => {
     const base = import.meta.env.BASE_URL || ''
-    const url = `${base}diagrams-manifest.json`
+    const v = import.meta.env.VITE_BUILD_ID || ''
+    const url = `${base}diagrams-manifest.json${v ? `?v=${v.slice(0, 7)}` : ''}`
     fetch(url)
       .then((r) => (r.ok ? r.json() : Promise.reject(new Error('Failed to load diagrams'))))
       .then(setList)

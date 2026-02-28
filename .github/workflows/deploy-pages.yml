@@ -31,11 +31,23 @@ jobs:
       - name: Install dependencies
         run: cd frontend && npm install
 
+      - name: Generate diagrams manifest
+        run: node frontend/scripts/generate-manifest.cjs
+
       - name: Build
         run: cd frontend && npm run build
+        env:
+          VITE_BUILD_ID: ${{ github.sha }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
+
+      - name: Verify manifest in build output
+        run: |
+          echo "Diagram count in manifest:"
+          grep -o '"id":' frontend/dist/diagrams-manifest.json | wc -l
+          head -c 400 frontend/dist/diagrams-manifest.json
+          echo ""
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

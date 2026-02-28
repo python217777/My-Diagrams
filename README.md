@@ -1,17 +1,27 @@
-| #   | Diagram                                                                         |
-| --- | ------------------------------------------------------------------------------- |
-| 1   | [ML Training Pipeline](./diagrams/ai-ml-training-pipeline.md)                   |
-| 2   | [How Embeddings Work in Machine Learning](./diagrams/how-embeddings-work-ml.md)  |
+| #   | Diagram                                                                                 |
+| --- | --------------------------------------------------------------------------------------- |
+| 1   | [ML Training Pipeline](./diagrams/ai-ml-training-pipeline.md)                           |
+| 2   | [How Embeddings Work in Machine Learning](./diagrams/how-embeddings-work-ml.md)         |
 | 3   | [RAG: Retrieval Augmented Generation](./diagrams/rag-retrieval-augmented-generation.md) |
-| 4   | [Transformer: Attention Overview](./diagrams/transformer-attention-overview.md)  |
-| 5   | [LLM Fine-tuning Pipeline](./diagrams/llm-finetuning-pipeline.md)                |
-| 6   | [Neural Network Overview](./diagrams/neural-network-overview.md)                 |
+| 4   | [Transformer: Attention Overview](./diagrams/transformer-attention-overview.md)         |
+| 5   | [LLM Fine-tuning Pipeline](./diagrams/llm-finetuning-pipeline.md)                       |
+| 6   | [Neural Network Overview](./diagrams/neural-network-overview.md)                        |
 
 # My Diagrams
 
 A collection of technical diagrams (Mermaid) for reference and documentation—ML pipelines, system design, workflows, and more.
 
 **Live site:** The [GitHub Pages](https://pages.github.com/) site is built from the `frontend` React app and deploys automatically when changes are merged to `main`. You can browse, search, view rendered Mermaid diagrams, and download diagram source from there. In your repo **Settings → Pages**, set **Source** to **GitHub Actions** so the workflow can deploy.
+
+## Star History
+
+<a href="https://www.star-history.com/#CodeByStella/My-Diagrams&type=date&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=CodeByStella/My-Diagrams&type=date&theme=dark&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=CodeByStella/My-Diagrams&type=date&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=CodeByStella/My-Diagrams&type=date&legend=bottom-right" />
+ </picture>
+</a>
 
 ## Contributing
 
